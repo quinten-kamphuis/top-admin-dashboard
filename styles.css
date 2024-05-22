@@ -3,6 +3,7 @@
     --light-blue: rgb(44, 145, 212);
     --white: #fff;
     --light-grey: #e9e9e9;
+    --shadow-grey: rgb(190, 189, 189);
     --yellow: #facc15;
 }
 
@@ -20,9 +21,6 @@ p, div{
 a{
     color: var(--white);
     text-decoration: none;
-}
-#header *{
-    border: 1px solid black;
 }
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -61,7 +59,7 @@ body>*{
 #header{
     display: grid;
     grid-template-rows: auto auto;
-    box-shadow: 0px 2px 8px 2px rgb(190, 189, 189);
+    box-shadow: 0px 2px 8px 2px var(--shadow-grey);
     z-index: 1;
 }
 #header-1{
@@ -98,14 +96,24 @@ body>*{
     border-radius: 50px;
 }
 #main{
-    background-color: #e9e9e9;
+    background-color: var(--light-grey);
     display: grid;
     grid-template: auto auto / 2fr 1fr;
     gap: 30px;
+    overflow-y: scroll;
 }
-#main > * {
-    background-color: var(--white);
+#main h2{
+    grid-column: 1 / -1;
 }
 #projects{
     grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px
+}
+.card{
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
 }
