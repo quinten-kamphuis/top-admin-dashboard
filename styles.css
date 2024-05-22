@@ -1,0 +1,111 @@
+:root{
+    font-size: 10px;
+    --light-blue: rgb(44, 145, 212);
+    --white: #fff;
+    --light-grey: #e9e9e9;
+    --yellow: #facc15;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 2.8rem;
+}
+p, div{
+    font-size: 1.8rem;
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+#header *{
+    border: 1px solid black;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template: auto 1fr / 1fr 3fr;
+}
+body>*{
+    padding: 20px;
+}
+#sidebar{
+    grid-row: 1/3;
+    background-color:  var(--light-blue,);
+    color: var(--white);
+    z-index: 2;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 30px;
+    font-weight: 900;
+}
+#sidebar svg{
+    fill: var(--white);
+    height: 3rem;
+}
+#title, #sidebar > div > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 2vh 0;
+}
+#title svg{
+    height: 5rem;
+}
+#header{
+    display: grid;
+    grid-template-rows: auto auto;
+    box-shadow: 0px 2px 8px 2px rgb(190, 189, 189);
+    z-index: 1;
+}
+#header-1{
+    display: grid;
+    grid-template-columns: 1fr repeat(2, auto);
+}
+#header-2{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, auto);
+}
+#header svg{
+    height: 3rem;
+}
+#notifications, #profile{
+    place-items: center;
+}
+.profile-picture{
+    background-color: var(--yellow);
+    border-radius: 50px;
+}
+#header .button{
+    background-color: var(--light-blue);
+    color: var(--white);
+    border-radius: 50px;
+}
+#search{
+    display: flex;
+    align-items: center;
+}
+#search-bar{
+    background-color: var(--light-grey);
+    width: 80%;
+    height: 100%;
+    border-radius: 50px;
+}
+#main{
+    background-color: #e9e9e9;
+    display: grid;
+    grid-template: auto auto / 2fr 1fr;
+    gap: 30px;
+}
+#main > * {
+    background-color: var(--white);
+}
+#projects{
+    grid-row: 1 / 3;
+}
