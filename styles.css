@@ -15,9 +15,16 @@
 }
 h1{
     font-size: 2.8rem;
+    cursor: pointer;
+}
+h2{
+    font-size: 1.9rem;
+}
+h3{
+    font-size: 1.8rem;
 }
 p, div{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 a{
     color: var(--white);
@@ -53,9 +60,13 @@ body>*{
     gap: 30px;
     font-weight: 900;
 }
+#sidebar a{
+    font-size: 2.0rem;
+}
 #sidebar svg{
     fill: var(--white);
     height: 3rem;
+    cursor: pointer;
 }
 #title, #sidebar > div > div {
     display: flex;
@@ -71,6 +82,7 @@ body>*{
     grid-template-rows: auto auto;
     box-shadow: 0px 2px 8px 2px var(--shadow-grey);
     z-index: 1;
+    padding: 20px 40px;
 }
 #header-1{
     display: grid;
@@ -87,6 +99,7 @@ body>*{
 #header svg{
     height: 2.2rem;
     margin-right: 15px;
+    cursor: pointer;
 }
 #notifications, #profile-tag{
     place-items: center;
@@ -147,9 +160,10 @@ body>*{
 #main{
     background-color: var(--light-grey);
     display: grid;
-    grid-template: auto auto / 2fr 1fr;
+    grid-template: auto 1fr / 2fr 1fr;
     gap: 30px;
     overflow-y: scroll;
+    padding-top: 30px;
 }
 #main h2{
     grid-column: 1 / -1;
@@ -166,7 +180,6 @@ body>*{
     background-color: var(--white);
     border-radius: 6px;
     aspect-ratio: 2 / 1;
-    box-sizing: border-box; 
     position: relative;  
     box-shadow: 2px 2px 5px 0px var(--shadow-grey);
 }
@@ -207,4 +220,15 @@ body>*{
 .card-content svg{
     height: 20px;
     cursor: pointer;
+}
+#announcements, #trending{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+}
+#announcement-card{
+    background-color: var(--white);
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px 0px var(--shadow-grey);
 }
